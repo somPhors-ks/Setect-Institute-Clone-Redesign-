@@ -1,0 +1,116 @@
+<div
+  class="w-screen p-10 pb-5 flex flex-col items-center justify-center gap-3 bg-linear-to-r from-[#0C4A34] to-[#00A86D]"
+>
+  <div class="w-screen grid grid-cols-3 sm:grid-cols-5 gap-5 px-5 sm:px-10 lg:px-20">
+    <div class="col-span-1 sm:col-span-3 flex flex-col gap-3">
+      <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3">
+        <img [src]="logo" alt="logo" class="w-8 sm:w-16" />
+        <div class="flex flex-col gap-1 items-center md:items-start">
+          <p class="text-[10px] lg:text-[18px] khmer-moul text-white">វិទ្យាស្ថាន ស៊ីតិក</p>
+          <p class="text-[8px] lg:text-[12px] text-white">SETEC Institute</p>
+        </div>
+      </div>
+      <p class="w-full text-[12px] hidden sm:flex text-white/40">
+        In order to achieve its vision, SETEC educates and trains students to attain quality of
+        knowledge and ethical values. This will assist them in grasping the job opportunities. To
+        this end SETEC focuses on staff and teacher development, student services, curriculum
+        modernization and facility improvement.
+      </p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text[14px] sm:text-xl font-semibold text-white">Quick Link</p>
+      <ul class="flex flex-col gap-0 md:gap-1 lg:gap-3 text-white">
+        <li>
+          <a
+            routerLink="/home"
+            routerLinkActive="active-link-footer"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/academic"
+            routerLinkActive="active-link-footer"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >Academic</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/aboutUs"
+            routerLinkActive="active-link-footer"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/internship"
+            routerLinkActive="active-link-footer"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >Internship</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/facilities"
+            routerLinkActive="active-link-footer"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >Facilities</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/structure"
+            routerLinkActive="active-link-footer"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >Structure</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/aiAssistant"
+            routerLinkActive="active-link-footer"
+            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+            >AI Assistant</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text[14px] sm:text-xl font-semibold text-white">Contact Us</p>
+      <div class="flex flex-col lg:flex-row gap-3">
+        <div class="flex items-center justify-center gap-3">
+          <a
+            href="#"
+            class="text-white hover:scale-104 hover:text-white/60 transition-all duration-350"
+          >
+            <span class="akar-icons--facebook-fill"></span>
+          </a>
+          <a
+            href="#"
+            class="text-white hover:scale-104 hover:text-white/60 transition-all duration-350"
+          >
+            <span class="akar-icons--telegram-fill"></span>
+          </a>
+        </div>
+        <hr class="bg-white/50 w-0.5 h-16 hidden lg:flex" />
+        <div class="flex items-center justify-center gap-3">
+          <button
+            class="flex items-center justify-center gap-2 text-white bg-white/40 p-2 px-3 lg:py-2 lg:px-6 rounded-full hover:text-white/60 hover:bg-white/30 transition-all duration-350 cursor-pointer"
+          >
+            <span class="griddy-icons--email-filled"></span>
+            <p>Email</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="w-screen h-1 text-white/50" />
+  <div class="w-screen flex items-center justify-between gap-3 px-5 sm:px-10 lg:px-20">
+    <p class="text-[12px] text-white/50">@ 2026 SETEC Institute</p>
+    <p class="text-[12px] text-white/50">Design UI By Yorn Somphors</p>
+  </div>
+</div>
