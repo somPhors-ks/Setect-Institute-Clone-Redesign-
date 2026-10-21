@@ -1,0 +1,39 @@
+<div class="w-screen flex flex-col items-center justify-center gap-10">
+  <div class="w-full flex flex-col items-center justify-center gap-3 p-5 px-5 sm:px-10 lg:px-20">
+    <p class="text-[18px] sm:text-[22px] md:text-4xl text-[#00A86D] font-semibold animation-fadeUp">
+      Associate Degree
+    </p>
+    <p class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-center animation-fadeUp">
+      Management Information System <br />
+      Design
+    </p>
+    <div class="w-full flex items-center justify-center gap-3 animation-fadeUp">
+      <a class="w-[25%] cursor-pointer hover:scale-101 transition-all duration-350">
+        <img src="Images/misLogo.png" />
+      </a>
+      <a class="w-[25%] cursor-pointer hover:scale-101 transition-all duration-350">
+        <img src="Images/designLogo.png" />
+      </a>
+    </div>
+  </div>
+  @for (item of assCourse; track $index) {
+    <div class="w-full flex flex-col items-start justify-center gap-3 p-5 px-5 sm:px-10 lg:px-20">
+      <p
+        class="text-[16px] sm:text-[20px] md:text-3xl text-[#00A86D] font-semibold animation-fadeUp"
+      >
+        {{ item.name }}
+      </p>
+      <img [src]="item.imageHeader" class="w-full rounded-2xl drop-shadow-2xl animation-fadeUp" />
+      <div
+        class="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-5"
+      >
+        @for (img of item.imgPrice; track $index) {
+          <img
+            [src]="img.imageUrl"
+            class="rounded-2xl cursor-pointer hover:scale-102 transition-all duration-350 shadow-sm animation-fadeUp"
+          />
+        }
+      </div>
+    </div>
+  }
+</div>

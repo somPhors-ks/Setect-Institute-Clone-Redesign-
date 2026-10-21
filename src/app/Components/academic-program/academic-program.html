@@ -5,32 +5,18 @@
   <p class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-center animation-fadeUp">
     Begin Your Education With Us, End With Job Opportunity
   </p>
-  <div class="grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-3">
-    <img
-      src="Images/misProgram.jpg"
-      alt=""
-      class="hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
-    />
-    <img
-      src="Images/microtikProgram.jpg"
-      alt=""
-      class="hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
-    />
-    <img
-      src="Images/designProgram.jpg"
-      alt=""
-      class="hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
-    />
-    <img
-      src="Images/bitProgram.jpg"
-      alt=""
-      class="hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
-    />
+  <div class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-3">
+    @for (p of programs; track $index) {
+      <img
+        [src]="p.programImage"
+        class="hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
+      />
+    }
   </div>
   <button
-    class="flex items-center justify-center gap-3 text-white py-2 p-3 sm:py-3 sm:px-6 rounded-full text-[8px] md:text-[16px] bg-[#00A86D] hover:bg-[#00A86D]/80 hover:scale-102 transition-all duration-350 cursor-pointer animation-fadeUp"
+    class="flex items-center justify-center gap-3 text-white py-2 p-3 sm:py-3 sm:px-6 rounded-full text-[10px] sm:text-[14px] md:text-[16px] bg-[#00A86D] hover:bg-[#00A86D]/80 hover:scale-102 transition-all duration-350 cursor-pointer animation-fadeUp"
   >
     Explore More Program
-    <span class="akar-icons--arrow-right"></span>
+    <span class="hidden sm:flex"><span class="akar-icons--arrow-right"></span></span>
   </button>
 </div>

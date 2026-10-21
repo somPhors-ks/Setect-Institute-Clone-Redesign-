@@ -1,6 +1,15 @@
-<div class="w-screen h-screen flex items-center justify-start gap-0 sm:gap-3">
-  <div class="w-[20%] sm:w-[10%] lg:w-[20%] h-full"><app-sidebar></app-sidebar></div>
-  <div class="w-full h-full flex items-center justify-center animation-fadeUp">
-    <app-ai-chat></app-ai-chat>
+<div
+  class="fixed top-0 left-0 z-200 w-screen h-screen flex flex-col items-center justify-start bg-white"
+>
+  <div class="w-full sticky top-0 left-0 z-201 flex flex-col items-center justify-center gap-0">
+    <app-header></app-header>
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="w-full h-full flex items-center justify-start gap-0 sm:gap-3">
+    <div class="w-[20%] sm:w-[10%] lg:w-[20%] h-full"><app-sidebar></app-sidebar></div>
+    <div class="w-full h-full flex items-center justify-center animation-fadeUp">
+      <app-ai-chat></app-ai-chat>
+    </div>
   </div>
 </div>

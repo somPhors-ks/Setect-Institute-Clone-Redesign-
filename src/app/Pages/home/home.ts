@@ -3,13 +3,12 @@ import { Cover } from '../../Components/cover/cover';
 import { Info } from '../../Components/info/info';
 import { Community } from '../../Components/community/community';
 import { AcademicProgram } from '../../Components/academic-program/academic-program';
-import { NewEvents } from '../../Components/new-events/new-events';
 import { GetInTouch } from '../../Components/get-in-touch/get-in-touch';
-import { Footer } from '../../Components/footer/footer';
+import { NewsEvents } from '../../Components/news-events/news-events';
 
 @Component({
   selector: 'app-home',
-  imports: [Cover, Info, Community, AcademicProgram, NewEvents, GetInTouch, Footer],
+  imports: [Cover, Info, Community, AcademicProgram, NewsEvents, GetInTouch],
   templateUrl: './home.html',
 })
 export class Home {}

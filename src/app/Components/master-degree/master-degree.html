@@ -1,0 +1,73 @@
+<div class="w-full flex flex-col items-center justify-center gap-10">
+  <div class="w-full flex flex-col items-center justify-center gap-3 px-5 sm:px-10 lg:px-20">
+    <p class="text-[16px] sm:text-[20px] md:text-4xl text-[#00A86D] font-semibold animation-fadeUp">
+      Master Degree in The Field of
+    </p>
+    <p class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-center animation-fadeUp">
+      This course is specially designed to fulfill the gap in the field of IT in Cambodia.
+    </p>
+
+    <div class="w-full flex items-center justify-center gap-3">
+      <img
+        src="Images/mitLogo.png"
+        class="w-[50%] lg:w-[30%] rounded-sm lg:rounded-xl drop-shadow-2xl hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
+      />
+      <img
+        src="Images/midLogo.png"
+        class="w-[50%] lg:w-[30%] rounded-sm lg:rounded-xl drop-shadow-2xl hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"
+      />
+    </div>
+    <p
+      class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-justify animation-fadeUp"
+    >
+      <span class="ml-10"></span> Its main purpose is to train students specialize skills that are
+      very important but lacking in today society in Cambodia. The areas of studies covered in this
+      Master degree are: Oracle database administration modules, Oracle Application Development
+      modules, Advance Computer Network Design and Implementations modules and last but no least
+      Business Management modules.
+    </p>
+
+    <p
+      class="text-[16px] sm:text-[20px] md:text-3xl text-[#00A86D] font-semibold mt-5 lg:mt-10 animation-fadeUp"
+    >
+      Master Degree in Information Technology Area of Focus
+    </p>
+    <p
+      class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-justify animation-fadeUp"
+    >
+      <span class="ml-10"></span> This course is specially designed to fulfill the gap in the field
+      of IT in Cambodia. Its main purpose is to train students specialize skills that are very
+      important but lacking in today society in Cambodia. The areas of studies covered in this
+      Master degree are: Oracle database administration modules, Oracle Application Development
+      modules, Advance Computer Network Design and Implementations modules and last but no least
+      Business Management modules.
+    </p>
+    <div class="w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      @for (item of areaFocusSubject; track $index) {
+        <div
+          class="flex flex-col items-center justify-center gap-3 rounded-2xl bg-white hover:scale-102 transition-all duration-350 drop-shadow-xl drop-shadow-black/20 p-5 cursor-pointer animation-fadeUp"
+        >
+          <span
+            class="w-12 h-12 flex items-center justify-center text-white bg-[#00A86D] rounded-full p-2"
+          >
+            <span [className]="item.icon"></span>
+          </span>
+          <p class="text-[10px] md:text-[16px] font-semibold">{{ item.name }}</p>
+        </div>
+      }
+    </div>
+
+    <p
+      class="text-[16px] sm:text-[20px] md:text-3xl text-[#00A86D] font-semibold mt-10 animation-fadeUp"
+    >
+      Master Degree in the field of Design Area of Focus
+    </p>
+    <p
+      class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-justify animation-fadeUp"
+    >
+      <span class="ml-10"></span> Program that can provide for university students studying Master
+      knowledge base pertaining clear depth in Advance Architecture Design, Advance Exterior and
+      Interior Designer and Professional Computer Landscape …
+    </p>
+  </div>
+</div>

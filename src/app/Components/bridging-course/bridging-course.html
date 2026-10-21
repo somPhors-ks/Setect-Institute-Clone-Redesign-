@@ -1,0 +1,30 @@
+<div class="w-screen flex flex-col items-center justify-center gap-10 bg-[#F5F5F5] mt-5">
+  <div class="w-full flex flex-col items-center justify-center gap-3 p-5 px-5 sm:px-10 lg:px-20">
+    <p
+      class="text-[16px] sm:text-[20px] md:text-4xl text-[#00A86D] font-semibold text-center animation-fadeUp"
+    >
+      BRIDGING COURSE FOR TRANSFER STUDENT
+    </p>
+    <p
+      class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-justify animation-fadeUp"
+    >
+      <span class="ml-10"></span> For students intending to continue their second-year bachelor's
+      degree studies who hold a Foundation Year certificate. The bridging subjects to be studied are
+      divided into the 3 majors below:
+    </p>
+    @for (b of bridgingItems; track $index) {
+      <div class="w-full flex flex-col gap-5">
+        <p
+          class="text-[16px] sm:text-[20px] md:text-3xl text-[#00A86D] font-semibold w-full text-left mt-10 animation-fadeUp"
+        >
+          {{ b.courseName }}
+        </p>
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
+          @for (img of b.courseImage; track $index) {
+            <img [src]="img.imageUrl" class="w-full drop-shadow-2xl rounded-2xl" />
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

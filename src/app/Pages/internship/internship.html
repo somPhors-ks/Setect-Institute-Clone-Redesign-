@@ -24,156 +24,28 @@
     </p>
   </div>
 
-  <!-- MIS -->
   <div class="w-full flex flex-col items-center justify-center gap-5">
-    <div class="w-full flex flex-col items-center justify-center gap-3">
-      <img src="Images/misLogo.png" alt="" class="w-50 animation-fadeUp" />
-      <p
-        class="text-[16px] sm:text-[20px] md:text-2xl text-[#0D75BB] font-semibold animation-fadeUp"
-      >
-        Management Information System
-      </p>
-    </div>
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship1.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
+    @for (item of majorItems; track $index) {
+      <div class="w-full flex flex-col items-center justify-center gap-3">
+        <img [src]="item.logo" class="w-50 animation-fadeUp" />
+        <p
+          class="text-[16px] sm:text-[20px] md:text-2xl text-[#00A86D] font-semibold animation-fadeUp"
+        >
+          {{ item.majorName }}
+        </p>
       </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship2.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
+      <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
+        @for (i of item.image; track $index) {
+          <div
+            class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
+          >
+            <img
+              [src]="i.imageUrl"
+              class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
+            />
+          </div>
+        }
       </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship3.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship4.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-    </div>
+    }
   </div>
-
-  <!-- Design -->
-  <div class="w-full flex flex-col items-center justify-center gap-5">
-    <div class="w-full flex flex-col items-center justify-center gap-3">
-      <img src="Images/designLogo.png" alt="" class="w-50 animation-fadeUp" />
-      <p
-        class="text-[16px] sm:text-[20px] md:text-2xl text-[#FBAF40] font-semibold animation-fadeUp"
-      >
-        Design
-      </p>
-    </div>
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship5.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship6.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship7.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship8.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-    </div>
-  </div>
-
-  <!-- BIT -->
-  <div class="w-full flex flex-col items-center justify-center gap-5">
-    <div class="w-full flex flex-col items-center justify-center gap-3">
-      <img src="Images/bitLogo.png" alt="" class="w-50 animation-fadeUp" />
-      <p
-        class="text-[16px] sm:text-[20px] md:text-2xl text-[#ED3796] font-semibold animation-fadeUp"
-      >
-        Business Information Technology
-      </p>
-    </div>
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship9.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship10.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship11.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-      <div
-        class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
-      >
-        <img
-          src="Images/Student_internship12.jpg"
-          alt=""
-          class="w-full hover:scale-105 transition-all duration-350 cursor-pointer"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-<div class="w-screen mt-10 lg:mt-22">
-  <app-footer></app-footer>
 </div>
