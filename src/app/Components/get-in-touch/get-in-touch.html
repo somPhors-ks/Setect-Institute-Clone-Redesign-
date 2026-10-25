@@ -9,47 +9,21 @@
     <div
       class="absolute top-[90%] sm:bottom-[-60%] grid grid-cols-1 sm:grid-cols-3 items-center justify-center gap-3 px-5 sm:px-10 lg:px-20"
     >
-      <div
-        class="p-3 rounded-2xl flex items-start justify-start gap-3 bg-white shadow-2xl hover:scale-101 transition-all duration-350 h-30 sm:h-38 lg:h-26 animation-fadeUp"
-      >
-        <div class="p-2 rounded-xl bg-[#00A86D] text-white flex items-center justify-center">
-          <span class="basil--location-outline"></span>
+      @for (item of getInTouchItems; track item.id) {
+        <div
+          class="p-3 rounded-2xl flex items-start justify-start gap-3 bg-white shadow-2xl hover:scale-101 transition-all duration-350 h-30 sm:h-38 lg:h-26 animation-fadeUp"
+        >
+          <div class="p-2 rounded-xl bg-[#00A86D] text-white flex items-center justify-center">
+            <span [className]="item.icon"></span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p class="text-[#00A86D] text-xl">{{ item.name }}</p>
+            <p class="text-[12px] text-black/40">
+              {{ item.desc }}
+            </p>
+          </div>
         </div>
-        <div class="flex flex-col gap-1">
-          <p class="text-[#00A86D] text-xl">Address</p>
-          <p class="text-[12px] text-black/40">
-            No. 86A, Street 110, Russian Federation Boulevard, Sangkat Teuk Laak I, Khan Toul Kork,
-            Phnom Penh, Cambodia
-          </p>
-        </div>
-      </div>
-
-      <div
-        class="p-3 rounded-2xl flex items-start justify-start gap-3 bg-white shadow-2xl hover:scale-101 transition-all duration-350 h-30 sm:h-38 lg:h-26 animation-fadeUp"
-      >
-        <div class="p-2 rounded-xl bg-[#00A86D] text-white flex items-center justify-center">
-          <span class="ant-design--phone-outlined"></span>
-        </div>
-        <div class="flex flex-col gap-1">
-          <p class="text-[#00A86D] text-xl">Phone</p>
-          <p class="text-[12px] text-black/40">
-            Tel / Fax: 023 880612 <br />
-            Mobile: 010 880612, 011 600619, 012 395190, 013 880612
-          </p>
-        </div>
-      </div>
-
-      <div
-        class="p-3 rounded-2xl flex items-start justify-start gap-3 bg-white shadow-2xl hover:scale-101 transition-all duration-350 h-30 sm:h-38 lg:h-26 animation-fadeUp"
-      >
-        <div class="p-2 rounded-xl bg-[#00A86D] text-white flex items-center justify-center">
-          <span class="griddy-icons--email-filled"></span>
-        </div>
-        <div class="flex flex-col gap-1">
-          <p class="text-[#00A86D] text-xl">Email</p>
-          <p class="text-[12px] text-black/40">info@setecu.com</p>
-        </div>
-      </div>
+      }
     </div>
   </div>
 

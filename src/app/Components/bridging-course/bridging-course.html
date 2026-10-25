@@ -12,7 +12,7 @@
       degree studies who hold a Foundation Year certificate. The bridging subjects to be studied are
       divided into the 3 majors below:
     </p>
-    @for (b of bridgingItems; track $index) {
+    @for (b of bridgingItems; track b.id) {
       <div class="w-full flex flex-col gap-5">
         <p
           class="text-[16px] sm:text-[20px] md:text-3xl text-[#00A86D] font-semibold w-full text-left mt-10 animation-fadeUp"
@@ -20,7 +20,7 @@
           {{ b.courseName }}
         </p>
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-          @for (img of b.courseImage; track $index) {
+          @for (img of b.courseImage; track img.id) {
             <img [src]="img.imageUrl" class="w-full drop-shadow-2xl rounded-2xl" />
           }
         </div>

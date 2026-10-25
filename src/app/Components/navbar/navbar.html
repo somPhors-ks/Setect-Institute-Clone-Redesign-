@@ -2,63 +2,17 @@
   class="w-screen hidden sm:flex items-center justify-center lg:justify-between gap-3 bg-[#F5F5F5] drop-shadow-2xl px-5 sm:px-10 lg:px-20 py-3"
 >
   <ul class="flex items-center justify-center gap-10 animation-fade">
-    <li>
-      <a
-        routerLink="/home"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Home</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/academic"
-        routerLinkActive="active-link"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Academic</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/aboutUs"
-        routerLinkActive="active-link"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >About Us</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/internship"
-        routerLinkActive="active-link"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Internship</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/facilities"
-        routerLinkActive="active-link"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Facilities</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/structure"
-        routerLinkActive="active-link"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Structure</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/aiAssistant"
-        routerLinkActive="active-link"
-        class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >AI Assistant</a
-      >
-    </li>
+    @for (item of navItem; track item.id) {
+      <li>
+        <a
+          [routerLink]="item.routeName"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
+          >{{ item.name }}</a
+        >
+      </li>
+    }
   </ul>
   <div
     class="hidden lg:flex items-center justify-center gap-3 bg-black/10 p-2 rounded-full animation-fade"
@@ -67,69 +21,39 @@
     <input type="text" name="" id="" placeholder="Search" class="w-46 outline-none" />
   </div>
 </div>
+
 <!-- Phone Responsive -->
 <div
   class="w-screen sm:hidden flex flex-col items-center justify-center gap-3 bg-[#F5F5F5] px-5 sm:px-10 lg:px-20 py-2"
 >
   <ul class="flex items-center justify-center gap-5 animation-fade">
-    <li>
-      <a
-        routerLink="/home"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Home</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/academic"
-        routerLinkActive="active-link"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Academic</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/aboutUs"
-        routerLinkActive="active-link"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >About Us</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/internship"
-        routerLinkActive="active-link"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Internship</a
-      >
-    </li>
+    @for (item of navItem; track item.id) {
+      @if (item.id <= 4) {
+        <li>
+          <a
+            [routerLink]="item.routeName"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
+            >{{ item.name }}</a
+          >
+        </li>
+      }
+    }
   </ul>
   <ul class="flex items-center justify-center gap-5">
-    <li>
-      <a
-        routerLink="/facilities"
-        routerLinkActive="active-link"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Facilities</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/structure"
-        routerLinkActive="active-link"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >Structure</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/aiAssistant"
-        routerLinkActive="active-link"
-        class="text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
-        >AI Assistant</a
-      >
-    </li>
+    @for (item of navItem; track item.id) {
+      @if (item.id > 4) {
+        <li>
+          <a
+            [routerLink]="item.routeName"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="sm:text-[11px] lg:text-[14px] cursor-pointer hover:text-black/60 transition-all duration-350"
+            >{{ item.name }}</a
+          >
+        </li>
+      }
+    }
   </ul>
 </div>

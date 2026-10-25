@@ -4,7 +4,7 @@
   ></div>
   <div class="w-full flex flex-col items-center justify-center gap-10 px-5 m-5 sm:px-10 lg:px-20">
     <!-- Rooms -->
-    @for (item of rooms; track $index) {
+    @for (item of rooms; track item.id) {
       <div class="w-full flex flex-col items-start justify-center gap-3">
         <p
           class="text-[18px] sm:text-[22px] md:text-3xl text-[#00A86D] font-semibold animation-fadeUp"
@@ -15,7 +15,7 @@
           <span class="ml-10"></span> {{ item.desc }}
         </p>
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-          @for (i of item.images; track $index) {
+          @for (i of item.images; track i.id) {
             <div
               class="w-full flex items-center justify-center overflow-hidden drop-shadow-2xl rounded-2xl animation-fadeUp"
             >

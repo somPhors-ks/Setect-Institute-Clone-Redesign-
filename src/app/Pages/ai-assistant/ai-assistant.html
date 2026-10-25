@@ -6,10 +6,38 @@
     <app-navbar></app-navbar>
   </div>
 
-  <div class="w-full h-full flex items-center justify-start gap-0 sm:gap-3">
-    <div class="w-[20%] sm:w-[10%] lg:w-[20%] h-full"><app-sidebar></app-sidebar></div>
-    <div class="w-full h-full flex items-center justify-center animation-fadeUp">
-      <app-ai-chat></app-ai-chat>
+  <div
+    class="w-full h-full flex items-center justify-start gap-0 sm:gap-3 transition-all duration-300 relative"
+  >
+    <div
+      [ngClass]="{
+        'absolute top-3 left-3 z-150 flex items-center justify-center gap-3': getDataCollapsed,
+        hidden: !getDataCollapsed,
+      }"
+    >
+      <button
+        (click)="openSideBar()"
+        class="flex items-center justify-center p-2 cursor-pointer rounded-full hover:bg-black/10 transition-all duration-350 animation-fade"
+      >
+        <span class="akar-icons--sidebar-left"></span>
+      </button>
+    </div>
+    <div
+      class="transition-all duration-300 h-full"
+      [ngClass]="{
+        'absolute top-0 -translate-x-full': getDataCollapsed,
+        'w-[50%] z-100 absolute sm:w-[40%] lg:w-[20%] lg:relative': !getDataCollapsed,
+      }"
+    >
+      <app-sidebar (collapsed)="getCollapsed($event)"></app-sidebar>
+    </div>
+    <div
+      class="w-full h-full flex items-end justify-center animation-fadeUp transition-all duration-300"
+      [ngClass]="{ 'w-screen absolute': getDataCollapsed }"
+    >
+      <div class="p-10 mb-40">
+        <app-ai-chat></app-ai-chat>
+      </div>
     </div>
   </div>
 </div>

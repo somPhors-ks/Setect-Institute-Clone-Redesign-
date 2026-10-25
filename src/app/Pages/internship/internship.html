@@ -25,7 +25,7 @@
   </div>
 
   <div class="w-full flex flex-col items-center justify-center gap-5">
-    @for (item of majorItems; track $index) {
+    @for (item of majorItems; track item.id) {
       <div class="w-full flex flex-col items-center justify-center gap-3">
         <img [src]="item.logo" class="w-50 animation-fadeUp" />
         <p
@@ -35,7 +35,7 @@
         </p>
       </div>
       <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-        @for (i of item.image; track $index) {
+        @for (i of item.image; track i.id) {
           <div
             class="w-full overflow-hidden rounded-2xl drop-shadow-2xl flex items-center justify-center animation-fadeUp"
           >

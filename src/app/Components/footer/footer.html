@@ -20,63 +20,17 @@
     <div class="flex flex-col gap-3">
       <p class="text[14px] sm:text-xl font-semibold text-white">Quick Link</p>
       <ul class="flex flex-col gap-0 md:gap-1 lg:gap-3 text-white">
-        <li>
-          <a
-            routerLink="/home"
-            routerLinkActive="active-link-footer"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/academic"
-            routerLinkActive="active-link-footer"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >Academic</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/aboutUs"
-            routerLinkActive="active-link-footer"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >About Us</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/internship"
-            routerLinkActive="active-link-footer"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >Internship</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/facilities"
-            routerLinkActive="active-link-footer"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >Facilities</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/structure"
-            routerLinkActive="active-link-footer"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >Structure</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="/aiAssistant"
-            routerLinkActive="active-link-footer"
-            class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
-            >AI Assistant</a
-          >
-        </li>
+        @for (item of navItem; track item.id) {
+          <li>
+            <a
+              [routerLink]="item.routeName"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="text-[10px] sm:text-[14px] text-white/80 cursor-pointer hover:text-white/60 transition-all duration-350"
+              >{{ item.name }}</a
+            >
+          </li>
+        }
       </ul>
     </div>
     <div class="flex flex-col gap-3">

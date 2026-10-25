@@ -6,7 +6,7 @@
     Begin Your Education With Us, End With Job Opportunity
   </p>
   <div class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-3">
-    @for (p of programs; track $index) {
+    @for (p of programs; track p.id) {
       <img
         [src]="p.programImage"
         class="hover:scale-101 transition-all duration-350 cursor-pointer animation-fadeUp"

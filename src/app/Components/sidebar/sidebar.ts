@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './sidebar.html',
 })
 export class Sidebar {
+  @Output() collapsed = new EventEmitter<boolean>();
+  setCollapsed: boolean = true;
+
   menuItems: any = [
     {
       id: 1,
@@ -28,4 +31,9 @@ export class Sidebar {
       icon: 'akar-icons--schedule',
     },
   ];
+
+  setCollasedSidebar(): any {
+    this.collapsed.emit(this.setCollapsed);
+    console.log(this.setCollapsed);
+  }
 }

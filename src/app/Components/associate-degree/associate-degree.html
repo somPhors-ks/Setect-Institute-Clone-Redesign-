@@ -16,7 +16,7 @@
       </a>
     </div>
   </div>
-  @for (item of assCourse; track $index) {
+  @for (item of assCourse; track item.id) {
     <div class="w-full flex flex-col items-start justify-center gap-3 p-5 px-5 sm:px-10 lg:px-20">
       <p
         class="text-[16px] sm:text-[20px] md:text-3xl text-[#00A86D] font-semibold animation-fadeUp"
@@ -27,7 +27,7 @@
       <div
         class="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-5"
       >
-        @for (img of item.imgPrice; track $index) {
+        @for (img of item.imgPrice; track img.id) {
           <img
             [src]="img.imageUrl"
             class="rounded-2xl cursor-pointer hover:scale-102 transition-all duration-350 shadow-sm animation-fadeUp"
