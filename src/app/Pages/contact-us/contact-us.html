@@ -1,0 +1,100 @@
+<div class="w-full flex flex-col justify-center items-center gap-5 mt-10 px-5 sm:px-10 lg:px-20">
+  <div class="w-full flex flex-col items-center justify-center">
+    <p class="text-[18px] sm:text-[22px] md:text-4xl text-[#00A86D] font-semibold animation-fadeUp">
+      Contact With Us
+    </p>
+    <p class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-center animation-fadeUp">
+      Ready to help you faster. Let's chat about how can we help you?
+    </p>
+  </div>
+  <div class="w-full grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+    @for (item of contactItems; track item.id) {
+      <div
+        class="w-full flex flex-col items-start gap-12 p-3 rounded-2xl shadow-2xl shadow-black/10 border-2 border-black/10 animation-fadeUp"
+      >
+        <span class="p-3 rounded-lg bg-green-100 text-black/60">
+          <span [className]="item.icon"></span>
+        </span>
+        <div class="w-full flex flex-col items-start gap-1">
+          <p class="text-xl font-semibold text-black/60">{{ item.titleText }}</p>
+          <p class="text-[12px] text-black/60">{{ item.desc }}</p>
+          <button
+            class="bg-black/10 px-4 py-2 cursor-pointer hover:scale-102 transition-all duration-350 rounded-lg"
+          >
+            {{ item.btnTitle }}
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-3 mt-10">
+    <div class="w-full flex flex-col items-center justify-center gap-2">
+      <p
+        class="text-[18px] sm:text-[22px] md:text-4xl text-[#00A86D] font-semibold animation-fadeUp"
+      >
+        Message With Us
+      </p>
+      <p
+        class="text-[10px] sm:text-[14px] md:text-[16px] text-black/50 text-center animation-fadeUp"
+      >
+        We'll get back to you within 24 hours.
+      </p>
+    </div>
+
+    <form class="flex flex-col justify-center items-center gap-5 p-3 rounded-2xl shadow">
+      <div class="w-full">
+        <label class="text-[14px] md:text-[16px] font-semibold text-black/60" for="email"
+          >Email</label
+        >
+        <input
+          class="w-full outline-none border-2 border-black/20 rounded-xl p-3 text-[12px]"
+          id="email"
+          type="email"
+          placeholder="Enter you email"
+        />
+      </div>
+      <div class="w-full">
+        <label class="text-[14px] md:text-[16px] font-semibold text-black/60" for="name"
+          >Name</label
+        >
+        <input
+          class="w-full outline-none border-2 border-black/20 rounded-xl p-3 text-[12px]"
+          id="name"
+          type="text"
+          placeholder="Enter you full name"
+        />
+      </div>
+      <div class="w-full">
+        <label class="text-[14px] md:text-[16px] font-semibold text-black/60" for="phone"
+          >Phone Number</label
+        >
+        <input
+          class="w-full outline-none border-2 border-black/20 rounded-xl p-3 text-[12px]"
+          id="phone"
+          type="phone"
+          placeholder="Enter you phone number"
+        />
+      </div>
+      <div class="w-full">
+        <label class="text-[14px] md:text-[16px] font-semibold text-black/60" for="phone"
+          >Your massages</label
+        >
+        <textarea
+          class="w-full h-40 outline-none border-2 border-black/20 rounded-xl p-3 text-[12px]"
+          id="phone"
+          type="phone"
+          placeholder="Enter you phone number"
+        ></textarea>
+      </div>
+      <div class="w-full flex items-center justify-end">
+        <button
+          type="button"
+          class="py-2 px-8 rounded-xl bg-black/10 hover:bg-black/20 transition-all duration-350 cursor-pointer"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

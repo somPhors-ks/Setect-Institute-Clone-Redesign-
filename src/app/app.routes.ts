@@ -7,6 +7,7 @@ import { Facilities } from './Pages/facilities/facilities';
 import { Structure } from './Pages/structure/structure';
 import { AiAssistant } from './Pages/ai-assistant/ai-assistant';
 import { PageNotFound } from './Pages/page-not-found/page-not-found';
+import { ContactUs } from './Pages/contact-us/contact-us';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,5 +18,6 @@ export const routes: Routes = [
   { path: 'facilities', component: Facilities },
   { path: 'structure', component: Structure },
   { path: 'aiAssistant', component: AiAssistant },
+  { path: 'contactUs', component: ContactUs },
   { path: '**', component: PageNotFound },
 ];
