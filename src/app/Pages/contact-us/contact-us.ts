@@ -32,7 +32,7 @@ export class ContactUs {
       id: 4,
       icon: 'ant-design--phone-outlined',
       titleText: 'Call us',
-      desc: 'Mon-Sat, 7pm-8pm',
+      desc: 'Mon-Sat, 7am-8pm',
       btnTitle: 'Call us',
     },
   ];
